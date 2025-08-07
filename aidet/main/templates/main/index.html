@@ -1,0 +1,58 @@
+<!-- myapp/templates/myapp/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rentgen AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    body {
+        margin: 0;
+        overflow: hidden;
+      }
+      .animated-bg {
+        background: linear-gradient(270deg, #0f172a, #1e3a8a, #3b82f6);
+        background-size: 600% 600%;
+        animation: gradientMotion 15s ease infinite;
+      }
+      @keyframes gradientMotion {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+  <body class="animated-bg h-screen flex items-center justify-center text-white">
+    <div class="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-10 max-w-xl text-center shadow-xl">
+      <h1 class="text-4xl font-bold mb-4 text-blue-200">Rentgen AI</h1>
+      <p class="text-lg text-blue-100 mb-6">
+        Analyze X-ray images with precision and intelligence.
+      </p>
+      <div class="flex justify-center gap-4">
+        <!-- Django-safe way to link to detection -->
+        <a href="{% url 'detection' %}" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-5 rounded-xl transition shadow">
+          Start Detection
+        </a>
+        <button
+          id="infoBtn"
+          class="bg-white text-blue-800 hover:bg-blue-100 py-2 px-5 rounded-xl transition shadow"
+        >
+          Learn More
+        </button>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("infoBtn").addEventListener("click", () => {
+        alert("Rentgen AI detects bone fractures using classical X-ray analysis.");
+      });
+    </script>
+  </body>
+</html>

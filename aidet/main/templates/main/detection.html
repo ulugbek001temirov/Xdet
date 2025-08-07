@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Medical Imaging</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+  <img src="{% static 'main/img/pg2.jpg' %}" alt="Hero Image" class="absolute inset-0 w-full h-full object-cover opacity-20 -z-10">
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
+      AI-powered Imaging Solutions
+    </h1>
+    <p class="text-lg md:text-xl text-gray-400 max-w-2xl mb-8">
+      Unlock the power of medical imaging with industry-leading AI tools that support real-time diagnosis.
+    </p>
+    <a href="#upload" class="bg-white text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition">
+      Try Now
+    </a>
+  </section>
+
+  <!-- Features Section -->
+  <section class="bg-black py-20 px-6">
+    <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3">
+      <div class="bg-gray-900 p-6 rounded-xl shadow-md">
+        <h2 class="text-xl font-semibold mb-2">Real-time Detection</h2>
+        <p class="text-gray-400">
+          Instantly detect over 100+ clinical findings with precision AI.
+        </p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-xl shadow-md">
+        <h2 class="text-xl font-semibold mb-2">Clinician-First Design</h2>
+        <p class="text-gray-400">
+          Built for radiologists and physicians with intuitive UI.
+        </p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-xl shadow-md">
+        <h2 class="text-xl font-semibold mb-2">Trusted Globally</h2>
+        <p class="text-gray-400">
+          Deployed across hospitals and research centers worldwide.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upload Section -->
+  <section id="upload" class="py-32 px-6 bg-black text-center">
+    <h2 class="text-3xl font-bold mb-6">Upload Your File</h2>
+    <button class="bg-white text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition">
+      Upload File
+    </button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 py-10 text-sm">
+    &copy; 2025 AI Imaging Inc. All rights reserved.
+  </footer>
+
+</body>
+</html>
